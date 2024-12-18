@@ -27,7 +27,7 @@ function generarCSV(resultados, archivo = "resultados.csv") {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
-  // Establecer un tiempo de espera global de 60 segundos
+  // Espera global de 60 segundos
   page.setDefaultTimeout(60000);
 
   await page.goto("https://registrosanitario.ispch.gob.cl/");
@@ -90,3 +90,16 @@ function generarCSV(resultados, archivo = "resultados.csv") {
 
   generarCSV(resultados);
 })();
+
+
+/*
+
+
+import { extract } from "@extractus/article-extractor"
+
+const article = await extract()
+
+console.log(article)
+
+
+*/
